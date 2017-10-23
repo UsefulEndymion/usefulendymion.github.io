@@ -26,8 +26,7 @@
             updateTime();
             setInterval(updateTime, 1000);
             function updateTime(){
-            //first, we hard code the start time
-            var startTime = new Date('Wed Oct 18 2017 01:01:00 UTC'); //moon landing
+            var startTime = new Date('Wed Oct 18 2017 01:01:00 UTC'); //last pubg server outage. Updated manually. Should make this pullable somewhere
             console.log(startTime)
             var nowTime = new Date();
             var dur = Math.floor((nowTime.getTime() - startTime.getTime()) / 1000),
@@ -44,8 +43,7 @@
             var s = Math.floor(dur)
             console.log(years, weeks, days, h, m, dur)
             var totalDur = '';
-            //now we write out all of this in a string format
-            //Please note: you can condense this a LOT, but I'm leaving this very wordy and verbose so that it's understandable!
+
             if (s > 0) {
               totalDur = ` ${s} fucking seconds`;
             }
