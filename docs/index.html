@@ -7,11 +7,11 @@
   <br> It has been <span id='dur-bit'></span> since the last PUBG Server Outage.
 </div>
 <script>
+setInterval(updateTime, 1000);
+function updateTime(){
 //first, we hard code the start time
 var startTime = new Date('Sun Jul 20 1969 20:18:00 UTC'); //moon landing
 console.log(startTime)
-while(true)
-{
 var nowTime = new Date();
 var dur = Math.floor((nowTime.getTime() - startTime.getTime()) / 1000),
   years = Math.floor(dur / (60 * 60 * 24 * 7 * 52));
@@ -49,6 +49,7 @@ if(years>0){
 }
 document.querySelector('#dur-bit').innerHTML = totalDur;
 }
+
 </script>
 </body>
 </html>
