@@ -4,17 +4,15 @@
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
 <div id='main'>
-  Start time: Sunday, July 16th, 1969 at 8:18 GMT
-  <br> End time: <span id='end'></span>
-  <br> It has been <span id='dur-bit'></span> since this event.
+  <br> It has been <span id='dur-bit'></span> since the last PUBG Server Outage.
 </div>
 <script>
 //first, we hard code the start time
 var startTime = new Date('Sun Jul 20 1969 20:18:00 UTC'); //moon landing
 console.log(startTime)
+while(true)
+{
 var nowTime = new Date();
-document.querySelector('#end').innerHTML = nowTime.toUTCString()
-
 var dur = Math.floor((nowTime.getTime() - startTime.getTime()) / 1000),
   years = Math.floor(dur / (60 * 60 * 24 * 7 * 52));
 dur -= years * 60 * 60 * 24 * 7 * 52;
@@ -50,6 +48,7 @@ if(years>0){
 	totalDur = ` ${years} years` +totalDur;
 }
 document.querySelector('#dur-bit').innerHTML = totalDur;
+}
 </script>
 </body>
 </html>
